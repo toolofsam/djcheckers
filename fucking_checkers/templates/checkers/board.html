@@ -7,9 +7,9 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <style type="text/css">
-      .block { width:100px;height:100px;color:#fff;float:left;font-weight:bold; }
-      .block_odd { background-color:#000; }
-      .block_even { background-color:red; }
+      .block { width:75px;height:75px;color:#fff;float:left;font-weight:bold; }
+      .block_black { background-color:#000; }
+      .block_red { background-color:red; }
       .linebreak { height:1px;overflow:auto;width:100%;}
     </style>
   </head>
@@ -17,10 +17,10 @@
 
 
     <!-- stuff here -->
-    <div style="width:800px;">
+    <div style="width:600px;">
     {% for i in blocks %}
-      <div class="block block_{{i.class}}"> 
-        {{forloop.counter}}
+      <div class="block block_{{i.color}}"> 
+        {{i.number}}
       </div>
     {% endfor %}
   </div>
