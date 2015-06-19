@@ -32,9 +32,10 @@ if it is even or odd to apply the correct red or black color to it.
 from game_settings import GameSettings 
 settings = GameSettings()
 
+
 def create_gameboard():
     """
-    Create the fucking gameboard!
+    Create the fucking gameboard grid!
     """
     blocks = []
     per_row = settings.per_row
