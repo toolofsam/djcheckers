@@ -30,17 +30,23 @@ class TestSurroundingMembers(unittest.TestCase):
 
         print "\n\nGetting edges"
         
-        n = 36
-        left_edge = get_left_edge(n)
-        right = get_right_edge(n)
-        self.assertEquals(left_edge, 33)
-        self.assertEquals(right_edge, 40)
-
         n = 4
         left_edge = get_left_edge(n)
         right_edge = get_right_edge(n)
         self.assertEquals(left_edge, 1)
         self.assertEquals(right_edge, 8)
+
+        n = 22
+        left_edge = get_left_edge(n)
+        right = get_right_edge(n)
+        self.assertEquals(left_edge, 17)
+        self.assertEquals(right_edge, 24)
+
+        n = 36
+        left_edge = get_left_edge(n)
+        right = get_right_edge(n)
+        self.assertEquals(left_edge, 33)
+        self.assertEquals(right_edge, 40)
 
         n = 63
         left_edge = get_left_edge(n)
