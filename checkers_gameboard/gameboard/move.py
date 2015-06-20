@@ -38,5 +38,5 @@ def get_right_edge(n):
 
 
 def get_left_edge(n):
-	return get_right_edge(n) - settings_per_row
+	return get_right_edge(n) - settings.per_row
 
