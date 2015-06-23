@@ -6,12 +6,24 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <style type="text/css">
       .block { width:75px;height:75px;color:#fff;float:left;font-weight:bold; }
       .block_black { background-color:#000; }
       .block_red { background-color:red; }
       .linebreak { height:1px;overflow:auto;width:100%;}
     </style>
+    <script type="text/javascript">
+   		function create_piece(color, pos) {
+			$('#block_' + pos).html('<img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-symbols-shapes/018712-glossy-black-icon-symbols-shapes-shapes-circle.png" width="70" height="70" />');
+		}
+		function reset_blacks() {
+			var num = [41, 43, 45, 47, 50, 52, 54, 56, 57, 59, 61, 63];
+			$.each(num, function(index, value) {
+				create_piece('black', value);
+			});
+		}
+	</script>
   </head>
   <body>
 
@@ -19,7 +31,7 @@
     <!-- stuff here -->
     <div style="width:600px;">
     {% for i in blocks %}
-      <div class="block block_{{i.color}}"> 
+      <div id="block_{{i.number}}" class="block block_{{i.color}}"> 
         {{i.number}}
       </div>
     {% endfor %}
